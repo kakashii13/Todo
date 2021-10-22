@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: auto; }
+  .container .form {
+    height: 40vh;
+    background-color: #ccc;
+    padding: 20px; }
+    .container .form .form__add {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 10px; }
+      .container .form .form__add .form-control {
+        padding: 10px;
+        height: 30px;
+        margin: 10px; }
+      .container .form .form__add .btn {
+        display: flex;
+        align-items: center;
+        height: 30px;
+        padding: 10px;
+        border: none;
+        outline: none; }
