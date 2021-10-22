@@ -1,26 +1,41 @@
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  width: auto; }
-  .container .form {
-    height: 40vh;
-    background-color: #ccc;
-    padding: 20px; }
-    .container .form .form__add {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin: 10px; }
-      .container .form .form__add .form-control {
-        padding: 10px;
-        height: 30px;
-        margin: 10px; }
-      .container .form .form__add .btn {
+body {
+  background-color: #ebebf3; }
+  body .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: auto; }
+    body .container .form {
+      width: 80%;
+      height: auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1); }
+      body .container .form .form__add {
         display: flex;
+        justify-content: center;
         align-items: center;
-        height: 30px;
-        padding: 10px;
-        border: none;
-        outline: none; }
+        margin: 10px; }
+        body .container .form .form__add .form-control {
+          width: 70%;
+          padding: 10px;
+          height: 30px;
+          margin: 10px; }
+        body .container .form .form__add .btn {
+          display: flex;
+          align-items: center;
+          height: 30px;
+          padding: 15px;
+          border: none;
+          outline: none;
+          background-color: #5431d4; }
+      body .container .form .box {
+        border-top: 1px solid #eee;
+        margin: 10px;
+        height: 60vh; }
+        body .container .form .box .list {
+          margin: 20px; }
+          body .container .form .box .list .list-items {
+            margin: 10px; }
