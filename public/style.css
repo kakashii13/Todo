@@ -1,5 +1,8 @@
 body {
   background-color: #ebebf3; }
+  body p {
+    margin: 0 0 0 15px;
+    display: inline-block; }
   body .container {
     display: flex;
     justify-content: center;
@@ -35,7 +38,18 @@ body {
         border-top: 1px solid #eee;
         margin: 10px;
         height: 60vh; }
-        body .container .form .box .list {
+        body .container .form .box .ul-list {
           margin: 20px; }
-          body .container .form .box .list .list-items {
+          body .container .form .box .ul-list .list-items {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             margin: 10px; }
+            body .container .form .box .ul-list .list-items .icon {
+              text-decoration: none;
+              color: #3e0480;
+              border-radius: 50%;
+              padding: 0 7px;
+              box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1); }
+              body .container .form .box .ul-list .list-items .icon:hover {
+                cursor: pointer; }

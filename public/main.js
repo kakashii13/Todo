@@ -17,11 +17,26 @@ function printTodo() {
       box.style.overflowY = "scroll";
       const list = document.getElementById("list");
       const listItems = document.createElement("li");
-      listItems.classList.add("list", "shadow-sm", "p-3", "bg-body", "rounded");
-      listItems.innerText = todoText.value;
+      listItems.classList.add(
+        "shadow-sm",
+        "p-3",
+        "bg-body",
+        "rounded",
+        "list-items"
+      );
+      let icon = document.createElement("a");
+      icon.classList.add("icon");
+      icon.innerText = "x";
+      let text = document.createElement("p");
+      text.classList.add("text");
+      text.innerText = todoText.value;
+      listItems.appendChild(text);
+      listItems.appendChild(icon);
       list.appendChild(listItems);
+
+      setLS();
     }
-    setLS();
+
     resetForm();
   });
 }
@@ -53,8 +68,21 @@ function showLS() {
     box.style.overflowY = "scroll";
     const list = document.getElementById("list");
     const listItems = document.createElement("li");
-    listItems.classList.add("list", "shadow-sm", "p-3", "bg-body", "rounded");
-    listItems.innerText = arr;
+    listItems.classList.add(
+      "shadow-sm",
+      "p-3",
+      "bg-body",
+      "rounded",
+      "list-items"
+    );
+    const icon = document.createElement("a");
+    icon.classList.add("icon");
+    icon.innerText = "x";
+    const text = document.createElement("p");
+    text.classList.add("text");
+    text.innerText = arr;
+    listItems.appendChild(text);
+    listItems.appendChild(icon);
     list.appendChild(listItems);
   });
 }
@@ -64,4 +92,37 @@ function resetForm() {
   setTimeout(() => {
     form.reset();
   }, 100);
+}
+
+// delete todo
+
+function deleteTD() {
+  let list = document.getElementById("list");
+  list.addEventListener("click", (e) => {
+    if (e.target.className === "icon") {
+      e.target.parentElement.remove();
+      deleteTDLS(e.target.parentElement.innerText);
+    }
+  });
+}
+
+deleteTD();
+
+// delete todo de LS
+
+let text = todoText.value;
+function deleteTDLS(text) {
+  let todos, textDelete;
+
+  // delete x todo
+  textDelete = text.substring(0, text.length - 1);
+  todos = getLS();
+
+  todos.forEach((text, index) => {
+    if (text === textDelete) {
+      todos.splice(index, 1);
+    }
+  });
+
+  localStorage.setItem("todo", JSON.stringify(todos));
 }
