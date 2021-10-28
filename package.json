@@ -1,0 +1,29 @@
+{
+  "name": "Todo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "install": "^0.13.0",
+    "node-sass": "^6.0.1",
+    "nodemon": "^2.0.14",
+    "nodenpm": "^0.1.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass --include-path scss style.scss public/style.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kakashii13/Todo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kakashii13/Todo/issues"
+  },
+  "homepage": "https://github.com/kakashii13/Todo#readme"
+}
