@@ -126,3 +126,44 @@ function deleteTDLS(text) {
 
   localStorage.setItem("todo", JSON.stringify(todos));
 }
+
+// dark mode
+
+const darkIcon = document.querySelector(".dark");
+
+darkIcon.addEventListener("click", () => {
+  let body = document.body;
+  body.classList.add("dark__body");
+  let form = document.querySelector(".form");
+  form.style.backgroundColor = "#353845";
+  let box = document.querySelector(".box");
+  box.style.borderTop = "1px solid #333";
+  let input = document.querySelector(".form-control");
+  input.style.backgroundColor = "#333";
+  input.style.color = "#fff";
+  input.style.border = "none";
+  let dark = document.querySelector(".dark");
+  dark.style.display = "none";
+});
+
+// light mode
+
+const lightIcon = document.querySelector(".light");
+
+lightIcon.addEventListener("click", () => {
+  let body = document.body;
+  body.classList.remove("dark__body");
+  body.style.transition = "all .5s";
+  // body.style.backgroundColor = "ebebfe";
+  let form = document.querySelector(".form");
+  form.style.backgroundColor = "#353845";
+  let box = document.querySelector(".box");
+  box.style.borderTop = "1px solid #333";
+  let input = document.querySelector(".form-control");
+  input.style.backgroundColor = "#333";
+  input.style.color = "#fff";
+  input.style.border = "none";
+  let dark = document.querySelector(".dark");
+  dark.style.display = "block";
+  lightIcon.style.display = "none";
+});

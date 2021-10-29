@@ -1,5 +1,5 @@
 {
-  "name": "Todo",
+  "name": "todo",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -12,7 +12,7 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build-css": "node-sass --include-path scss style.scss public/style.css",
+    "build-css": "node-sass --include-path scss scss/style.scss public/style.css",
     "watch-css": "nodemon -e scss -x \"npm run build-css\""
   },
   "repository": {

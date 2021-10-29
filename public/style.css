@@ -1,5 +1,22 @@
+body .dark__icon {
+  position: absolute;
+  left: 96%;
+  margin-top: 10px; }
+  body .dark__icon:hover {
+    cursor: pointer; }
+  body .dark__icon img {
+    position: absolute; }
+    body .dark__icon img:nth-child(1) {
+      z-index: 1000; }
+
+.dark__body {
+  transition: all 0.5s;
+  background-color: #222222; }
+
 body {
-  background-color: #ebebfe; }
+  background-color: #ebebfe;
+  position: relative;
+  width: 99vw; }
   body p {
     margin: 0 0 0 15px;
     display: inline-block; }
@@ -7,7 +24,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 95vh;
     width: auto; }
     body .container .form {
       width: 80%;
